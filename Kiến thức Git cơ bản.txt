@@ -67,3 +67,5 @@ git pust https://github.com/TruongTuanDung2001/thuahanhGit.git master
 
     + 2: rồi giờ muốn đẩy file lên: git push + tên + branch 
         vd: git push origin master
+
+        as
