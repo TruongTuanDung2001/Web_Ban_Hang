@@ -10,7 +10,7 @@
 
 - Remote : các dữ liệu nằm trên server
 
-# Command (câu lệnh)
+# Command (câu lệnh)  
 
 - git init (dự án sẽ sử dụng đc git nếu như đánh cái lệnh này)
 
