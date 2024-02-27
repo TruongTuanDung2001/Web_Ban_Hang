@@ -1,0 +1,69 @@
+# Terms (danh từ)
+
+- Repository (Repo) : là 1 cái core, nhưng trên lập trình nó là 1 dự án thư mục
+
+- Branch : (Cành) (cành mặc định lúc nào cũng là master)
+
+- Conflict : (Xung đột)
+
+- Local: các file dữ liệu, hình ảnh, video ... nằm trên máy tính
+
+- Remote : các dữ liệu nằm trên server
+
+# Command (câu lệnh)
+
+- git init (dự án sẽ sử dụng đc git nếu như đánh cái lệnh này)
+
+- git status (hiển thị trạng thái dự án của mình, tất cả các thay đổi)
+
+- git add (giúp chúng ta chuẩn bị lưu lại thời điểm hiện tại của dự án)
+    + 1 là git add + tên file thay đổi
+    + 2 là git add + "." là lấy tất cả các file thay đổi
+
+- git reset (lấy ra các file chuẩn bị được lưu, nó là ngược lại của git add .)
+
+- git commit -m "ghi chú file chuẩn bị lưu" (lệnh để lưu các file thay đổi, có ghi chú) (ghi chú đầu tiên thường là "initial commit :  ghi chú đầu tiên, thời điểm bắt đầu dự án")
+
+- git log (xem các thời điểm chúng ta commit file lên)
+
+- git log --oneline (xem các thời điểm chúng ta commit file lên nhưng gọn gàng hơn)
+    + nó có hiện id commit trên mỗi commit của chúng ta (để làm cái lệnh bên dưới)
+
+- git checkout + {id commit} (vd: 7becbb8) (di chuyển dữ liệu file về lúc chưa commit file này lên)
+
+- git checkout + {branch name} (vd: git checkout master) (trở về dữ liệu file hiện tại đang làm)
+
+*BRANCH : CÀNH
+- git branch (hiển thị branch mặc định, hiện tại của chúng ta, hiển thị có bao nhiêu branch và mình đang ở branch nào)
+
+- git checkout -b {branch name} (tạo 1 branch mới)
+
+    * nếu mình tạo 1 file trên 1 branch bất kỳ thì các branch khác sẽ không có file đó, nên khi chuyển đổi qua lại nó sẽ không hiển thị ra.
+    
+- git checkout + {branch name đã có} (chuyển đổi qua lại giữa các branch)
+
+- git merge + {branch name} (gộp 2 branch lại) (nếu chúng ta đang ở branch master, chúng ta muốn merge branch dev và master thì: git merge dev và ngược lại)
+
+- git branch -d + {branch name} (xóa 1 branch)
+
+* Cách để xuất hiện conflit: là tạo 1 branch tên là conflict, thì branch có file giống branch master, chúng ta vào 1 file vd: index.html, tạo 1 nội dung bất kỳ -> git add . , git commit ... lên.
+
+Sau đó chúng ta chuyển qua branch master (git checkout master), vào 1 file giống với cái trên vd: index.html và sửa nội dung khác với cùng dòng, rồi chúng ta git add . , git commit -m ... lên.
+
+Quan trọng, lúc này chúng ta đang ở branch master, chúng ta merge branch conflict vào bằng git merge conflict, thì lúc này máy sẽ hiện lỗi conflict và hiển thị 2 dòng với hai nội dung khác nhau.
+
+Chúng ta chỉ việc chọn 1 trong 2 dòng và xóa dòng còn lại hoặc để chọn cả hai dòng, sau đó chúng ta gõ git add . , git status để kiểm tra hoặc kh, sau đó chúng ta gõ "git commit" không có ghi chú hay "-m" nha, vì chúng ta đang giải quyết 1 conflit.
+
+Sau đó máy hiện ra kết quả đã giải quyết confict, chúng ta bấm "dấu 2 chấm : và chữ q để thoát ra" bất git log để kiểm tra lại các commit.
+
+* Đẩy file local lên remote
+
+- git push + link đường dẫn http + tên branch vd: 
+git pust https://github.com/TruongTuanDung2001/thuahanhGit.git master
+
+* Cách 2 : tạo ra 1 ây li ớch
+    + 1: git remote add + "tên gì cũng đc" + đường dẫn
+        vd: git remote add origin https://github.com/TruongTuanDung2001/thuahanhGit.git 
+
+    + 2: rồi giờ muốn đẩy file lên: git push + tên + branch 
+        vd: git push origin master
