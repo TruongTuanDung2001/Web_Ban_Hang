@@ -244,7 +244,7 @@ ul, li{
 
 /* menu */
 .menu-description{
-    margin: 0px 120px;
+    margin: 0px 300px;
     display: flex;
     text-align: center;
     justify-content: space-around;
@@ -291,7 +291,7 @@ ul, li{
     align-items: center;
     justify-content: center;
     gap: 20px;
-    margin: 20px 120px;
+    margin: 20px 300px;
 }
 
 .menu-events .ev{
@@ -318,7 +318,7 @@ ul, li{
 
 /* product-flashSelf */
 .product-flashSelf{
-    margin: 0 120px;
+    margin: 0 300px;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -326,10 +326,13 @@ ul, li{
 
 .product-flashSelf .title {
     position: relative;
+    background-color: rgb(203,4,11);
+
 }
 
 .product-flashSelf .title img{
     width: 100%;
+    height: 100%;
 }
 
 /* announce-time */
@@ -388,4 +391,135 @@ ul, li{
     right: 165px;
 }
 
+/* product-flasSale > list-items */
+.product-flashSelf .list-items{
+    display: flex;
+    background-color: rgb(203,4,11);
+    padding: 35px 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
 
+.product-flashSelf .list-items .item{
+    border-radius: 10px;
+    padding: 10px 5px;
+    cursor: pointer;
+}
+
+.product-flashSelf .list-items .item>img{
+    width: 170px;
+    height: 190px;
+    padding-top: 10px;
+    object-fit: contain;
+}
+
+.product-flashSelf .list-items .item{
+
+}
+
+.product-flashSelf .list-items .item>p{
+    padding: 30px 0px;
+}
+
+.product-flashSelf .list-items .item:hover>p{
+    color: rgb(53, 95, 191);
+}
+
+.product-flashSelf .list-items .item:hover>img{
+    object-fit: contain;
+
+    transition: all 0.5s ease;
+    padding-top: 0px;
+}
+
+.product-flashSelf .list-items .item h6{
+    display: block;
+    color: rgb(208,2,28);
+    font-size: 20px;
+}
+
+.product-flashSelf .list-items .item h6>u{
+    display: inline-block;
+    font-size: 15px;
+    color: rgb(208,2,28);
+}
+
+.product-flashSelf .list-items .item .discount{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* discount */
+.product-flashSelf .list-items .item .discount s{
+    color: rgb(164,164,164);
+    font-size: 15px;
+}
+
+.product-flashSelf .list-items .item .discount s u{
+    color: rgb(164,164,164);
+    font-size: 12px;
+}
+
+.product-flashSelf .list-items .item .discount p{
+    padding: 5px 2px;
+    font-weight: bold;
+    color: rgb(235,87,87);
+    background-color: rgb(255,240,233);
+    border-radius: 8px;
+}
+
+.product-flashSelf .list-items .item .status{
+    display: flex;
+    width: 100%;
+    margin: 20px 0 10px 0px;
+    position: relative;
+}
+
+.product-flashSelf .list-items .item .status img{
+    width: 20px;
+    height: 30px;
+    object-fit: contain;
+    position: absolute;
+    top: -8px;
+    bottom: 0;
+    z-index: 2;
+    background-color: rgb(252,181,0,0);
+}
+
+.product-flashSelf .list-items .item .status .data{
+    position: relative;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(221,221,221);
+    border-radius: 10px;
+}
+
+.product-flashSelf .list-items .item .status .data::after{
+    content: ".";
+}
+
+.product-flashSelf .list-items .item .status .data i{
+    background: rgb(252,181,0);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 10px 0px 0px 10px ;
+}
+
+.product-flashSelf .list-items .item .status .data i::before{
+    content: ".";
+}
+
+.product-flashSelf .list-items .item .status .data p{
+    position: absolute;
+    width: 62%;
+    background-color: rgb(221,221,22,0.0);
+}
